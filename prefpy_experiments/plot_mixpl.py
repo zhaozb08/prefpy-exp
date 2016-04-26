@@ -8,10 +8,10 @@ def print_usage(argv0):
     sys.exit()
 
 def plot_error_time_data(str_error_type,
-                        error_results,
-                        time_results,
-                        output_img_filename=None
-                       ):
+                         error_results,
+                         time_results,
+                         output_img_filename=None
+                        ):
     # Plot data
     fig = plt.figure(num=1, figsize=(1350/96, 500/96), dpi=96)
     plt.subplot(121)

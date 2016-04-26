@@ -1,5 +1,11 @@
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
+
+
+def print_usage(argv0):
+    print("USAGE: python3", argv0, "<error csv filename> <time csv filename> [output png filename]")
+    sys.exit()
 
 def plot_error_time_data(str_error_type,          # string, title of the error measure in use
                          error_results,           # error results
@@ -27,3 +33,22 @@ def plot_error_time_data(str_error_type,          # string, title of the error m
         plt.savefig(output_img_filename, dpi=96)
     else:
         plt.show()
+
+def main(argv):
+    if len(argv) < 3:
+        print("Inavlid number of arguments provided")
+        print_usage(argv[0])
+
+    # Load data from file
+    error_results = np.loadtxt(argv[1], delimiter=',')
+    time_results = np.loadtxt(argv[2], delimiter=',')
+
+    out_img = None
+    if len(argv) >= 4:
+        out_img = argv[3]
+
+    plot_error_time_data(error_results, time_results, out_img)
+
+
+if __name__ == "__main__":
+    main(sys.argv)
