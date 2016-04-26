@@ -15,6 +15,6 @@ if __name__ == "__main__":
           url="http://github.com/pdpiech/prefpy-experiments",
           author="Peter Piech",
           license="GPL-3",
-          packages=["prefpy-experiments"],
+          packages=["prefpy_experiments"],
           install_requires=["prefpy"],
           zip_safe=False)
