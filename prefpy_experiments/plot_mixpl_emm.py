@@ -51,7 +51,7 @@ def plot_error_time_data(str_error_type,          # string, title of the error m
         plt.show()
 
 def main(argv):
-    if len(argv) < 4:
+    if len(argv) < 6:
         print("Inavlid number of arguments provided")
         print_usage(argv[0])
 
@@ -60,14 +60,18 @@ def main(argv):
     # Load data from file
     error_results = np.loadtxt(argv[2], delimiter=',')
     time_results = np.loadtxt(argv[3], delimiter=',')
+    orig_error_results = np.loadtxt(argv[4], delimiter=',')
+    orig_time_results = np.loadtxt(argv[5], delimiter=',')
 
     out_img = None
-    if len(argv) >= 5:
-        out_img = argv[4]
+    if len(argv) >= 7:
+        out_img = argv[6]
 
     plot_error_time_data(str_error_type=error_type,
                          error_results=error_results,
                          time_results=time_results,
+                         orig_error_results=orig_error_results,
+                         orig_time_results=orig_time_results,
                          output_img_filename=out_img
                         )
 
