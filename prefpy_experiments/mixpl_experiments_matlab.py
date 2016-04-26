@@ -1,11 +1,11 @@
 import sys
 import time
 import numpy as np
-import plackettluce as pl
-import stats as stats
-import gmm_mixpl
-#import evbwie as emm
-import plot_mixpl_matlab as plot
+from prefpy import plackettluce as pl
+from prefpy import stats as stats
+from prefpy import gmm_mixpl
+#from prefpy import evbwie as emm
+from . import plot_mixpl_matlab as plot
 np.seterr(all='raise')
 
 

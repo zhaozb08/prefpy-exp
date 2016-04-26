@@ -1,9 +1,9 @@
 import sys
 import numpy as np
-import plackettluce as pl
-import stats
-import gmm_mixpl
-import plot_mixpl_mixingproportion as plot
+from prefpy import plackettluce as pl
+from prefpy import stats
+from prefpy import gmm_mixpl
+from . import plot_mixpl_mixingproportion as plot
 np.seterr(all='raise')
 
 

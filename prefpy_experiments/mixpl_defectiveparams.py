@@ -3,9 +3,9 @@ import time
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
-import plackettluce as pl
-import gmm_mixpl
-import stats
+from prefpy import plackettluce as pl
+from prefpy import gmm_mixpl
+from prefpy import stats
 
 
 def print_usage(argv0):

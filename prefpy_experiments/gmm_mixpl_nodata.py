@@ -2,8 +2,8 @@ import sys
 import numpy as np
 import scipy
 import functools
-import plackettluce as pl
-import stats
+from prefpy import plackettluce as pl
+from prefpy import stats
 
 def calcMoments(params): # Full top3 (20 moments)
     alpha = params[0]

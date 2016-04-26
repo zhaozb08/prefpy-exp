@@ -2,10 +2,10 @@ import sys
 import time
 import pickle
 import numpy as np
-import plackettluce as pl
-import stats as stats
-import evbwie as emm
-import plot_mixpl_emm as plot
+from prefpy import plackettluce as pl
+from prefpy import stats as stats
+from prefpy import evbwie as emm
+from . import plot_mixpl_emm as plot
 np.seterr(all='raise')
 
 

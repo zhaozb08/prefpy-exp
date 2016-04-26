@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-import plackettluce as pl
+from prefpy import plackettluce as pl
 
 def print_usage(argv0):
     print("USAGE: python3 " + argv0 + " <num alts> <num votes> <num datasets> <dataset(s) base filename.csv>")
