@@ -5,7 +5,7 @@ from prefpy import plackettluce as pl
 from prefpy import stats as stats
 from prefpy import mmgbtl as mm
 from prefpy import gmmra as gmm
-from . import plot_mm_gmm as plot
+from prefpy_experiments import plot_mm_gmm as plot
 
 
 def print_usage(argv0):

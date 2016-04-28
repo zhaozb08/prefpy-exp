@@ -5,7 +5,7 @@ import numpy as np
 from prefpy import plackettluce as pl
 from prefpy import stats as stats
 from prefpy import evbwie as emm
-from . import plot_mixpl_emm as plot
+from prefpy_experiments import plot_mixpl_emm as plot
 np.seterr(all='raise')
 
 

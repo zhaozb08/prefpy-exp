@@ -3,7 +3,7 @@ import numpy as np
 from prefpy import plackettluce as pl
 from prefpy import stats
 from prefpy import gmm_mixpl
-from . import plot_mixpl_mixingproportion as plot
+from prefpy_experiments import plot_mixpl_mixingproportion as plot
 np.seterr(all='raise')
 
 
