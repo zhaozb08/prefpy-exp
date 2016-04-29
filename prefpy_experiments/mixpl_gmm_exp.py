@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 from prefpy import plackettluce as pl
 from prefpy import stats as stats
-from prefpy import evbwie as emm
+from prefpy import gmm_mixpl
 from prefpy_experiments import plot_mixpl_gmm as plot
 np.seterr(all='raise')
 
@@ -73,7 +73,7 @@ def main(argv):
 
     # initialize the aggregators for each class of algorithm
     print("Initializing Aggregator Classes...")
-    emmagg = emm.EMMMixPLAggregator(alts)
+    gmmagg = gmm_mixpl.GMMMixPLAggregator(alts, use_matlab=True)
 
     print("Starting Experiments...")
     k_n = 0 # experiment index number
