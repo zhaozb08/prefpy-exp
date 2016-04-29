@@ -16,7 +16,7 @@ def print_usage(argv0):
     sys.exit()
 
 def main(argv):
-    if len(argv) != 16:
+    if len(argv) != 12:
         print_usage(argv[0])
     m = int(argv[1]) # number of alternatives
     t = int(argv[2]) # (index + 1) of final dataset (number of datasets if base filename is 0...00)
