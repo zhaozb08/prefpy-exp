@@ -76,14 +76,8 @@ def main(argv):
     emm_solns_file = open(emm_solns_filename, 'wb') # writable binary mode
 
     # open previous experiments results files
-    orig_error_results = np.loadtxt("../../MixPL_WsseTimeExperiments/mse_mixPL_04-alts_1000-trials_21.csv", delimiter=',')
-    orig_time_results = np.loadtxt("../../MixPL_WsseTimeExperiments/time_mixPL_04-alts_1000-trials_21.csv", delimiter=',')
-
-    #orig_error_results = np.loadtxt("../../MixPL_WsseTimeExperiments/mse_mixPL_04-alts_1000-trials_20_trunc1.csv", delimiter=',')
-    #orig_time_results = np.loadtxt("../../MixPL_WsseTimeExperiments/time_mixPL_04-alts_1000-trials_20_trunc1.csv", delimiter=',')
-
-    #orig_error_results = np.loadtxt("../../MixPL_WsseTimeExperiments/mse_mixPL_04-alts_1000-trials_20_trunc2.csv", delimiter=',')
-    #orig_time_results = np.loadtxt("../../MixPL_WsseTimeExperiments/time_mixPL_04-alts_1000-trials_20_trunc2.csv", delimiter=',')
+    orig_error_results = np.loadtxt("../../MixPL_GmmExperiments/mse_mixPL_04-alts_2000-trials_22.csv", delimiter=',')
+    orig_time_results = np.loadtxt("../../MixPL_GmmExperiments/time_mixPL_04-alts_2000-trials_22.csv", delimiter=',')
 
     wsse_res = np.empty((p, 2))
     sse_res = np.empty((p, 2))
