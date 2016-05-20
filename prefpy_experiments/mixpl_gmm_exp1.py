@@ -96,16 +96,16 @@ def main(argv):
 
             # DEFAULT: top3_full GMM (20 moments)
             time_val = time.perf_counter()
-            soln, t0, t1 = gmmagg.aggregate(rankings = votes_curr,
-                                            ##rankings = None, # for ground-truth empirical limit
+            soln, t0, t1 = gmmagg.aggregate(##rankings = votes_curr,
+                                            rankings = None, # for ground-truth empirical limit
                                             algorithm = "top3_full",
                                             epsilon = None,
                                             max_iters = None,
                                             approx_step = None,
-                                            opto = "matlab_default",
-                                            ##opto = "matlab_emp", # for ground-truth empirical limit
-                                            true_params = None
-                                            ##true_params = params # for ground-truth empirical limit
+                                            ##opto = "matlab_default",
+                                            opto = "matlab_emp_default", # for ground-truth empirical limit
+                                            ##true_params = None
+                                            true_params = params # for ground-truth empirical limit
                                            )
             time_val = time.perf_counter() - time_val
             wsse_val = stats.mix2PL_wsse(params, soln, m)
@@ -116,13 +116,13 @@ def main(argv):
             time_vals[1][i] = t1
             time_vals[2][i] = time_val
             gmm_result = gmm_mixpl.GMMMixPLResult(num_alts = m,
-                                                  num_votes = n,
-                                                  ##num_votes = 0, # ground-truth empirical limit
+                                                  ##num_votes = n,
+                                                  num_votes = 0, # ground-truth empirical limit
                                                   num_mix = 2,
                                                   true_params = params,
                                                   cond = "top3_full",
-                                                  opto = "matlab_default",
-                                                  ##opto = "matlab_emp",  # ground-truth empirical limit
+                                                  ##opto = "matlab_default",
+                                                  opto = "matlab_emp_default",  # ground-truth empirical limit
                                                   soln_params = soln,
                                                   momnts_runtime = t0,
                                                   opto_runtime = t1,

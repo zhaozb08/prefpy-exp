@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 def print_usage(argv0):
-    print("USAGE: python3", argv0, "<error description> <error csv filename> <time csv filename> <previous error csv filename> <previous time csv filename> [output png filename]")
+    print("USAGE: python3", argv0, "<error description> <error csv filename> <time csv filename> [output png filename]")
     sys.exit()
 
 def plot_error_time_data(str_error_type,          # string, title of the error measure in use
