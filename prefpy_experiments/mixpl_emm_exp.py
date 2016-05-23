@@ -194,7 +194,7 @@ def main(argv):
         time_res[k_n][2] = np.mean(time_vals[1]) # EMM 2
 
         # write results intermediately after a full set of trials for each n
-        pickle.dump(emm_solns, emm_solns_file)
+        #pickle.dump(emm_solns, emm_solns_file)
 
         k_n += 1
 
