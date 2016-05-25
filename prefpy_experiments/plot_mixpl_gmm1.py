@@ -17,14 +17,14 @@ def plot_error_time_data(str_error_type,          # string, title of the error m
     plt.subplot(121)
     plt.title(str_error_type)
     plt.xlabel("n (votes)")
-    gmm_line1, = plt.plot(error_results.T[0], error_results.T[1], "bs", label="GMM")
+    gmm_line1, = plt.plot(error_results.T[0], error_results.T[1], "bs", markersize=8.0, label="GMM")
 
     plt.subplot(122)
     plt.title("Time (seconds)")
     plt.xlabel("n (votes)")
-    plt.plot(time_results.T[0], time_results.T[3], "bs", label="GMM")
-    momntCalc_line, = plt.plot(time_results.T[0], time_results.T[1], "ro", label="GMM-Moments") # GMM moment value calc time
-    optoCalc_line, = plt.plot(time_results.T[0], time_results.T[2], "yd", label="GMM-Opt") # GMM optimization time
+    plt.plot(time_results.T[0], time_results.T[3], "bs", markersize=8.0, label="GMM")
+    momntCalc_line, = plt.plot(time_results.T[0], time_results.T[1], "ro", markersize=8.0, label="GMM-Moments") # GMM moment value calc time
+    optoCalc_line, = plt.plot(time_results.T[0], time_results.T[2], "yd", markersize=8.0, label="GMM-Opt") # GMM optimization time
 
     fig.legend([gmm_line1, momntCalc_line, optoCalc_line], ["GMM", "GMM-Moments", "GMM-Opt"], loc="center right")
     if output_img_filename is not None:
