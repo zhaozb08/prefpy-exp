@@ -45,7 +45,7 @@ def plot_error_time_data(str_error_type,          # string, title of the error m
         plt.plot(time_results.T[0], time_results.T[1], "mH", label="EMM-10-1")
 
     #fig.legend([gmm_line, emm_line, emm_new1, emm_new2], ["GMM", "EMM", "EMM-10-10", "EMM-5-10"], loc="center right")
-    fig.legend([gmm_line, emm_new1, emm_new2], ["GMM", "EMM-20-1", "EMM-10-1"], loc="center right")
+    fig.legend([gmm_line, emm_new1, emm_new2], ["GMM", "EMM-20-1", "EMM-10-1"], loc="center right", bbox_to_anchor=(1,0.63))
     if output_img_filename is not None:
         plt.savefig(output_img_filename, dpi=96)
     else:
